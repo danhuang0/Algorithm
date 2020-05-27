@@ -12,7 +12,7 @@ public interface IFileComponent
     void Delete();
 }
 
-// Left class
+// Leaf class
 public class File : IFileComponent
 {
     private string name;
