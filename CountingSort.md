@@ -6,7 +6,7 @@ Counting Sort is non-comparison sorting algorithm that sorts the elements of an 
 - Time: O(n + k) <br/>
 If range is given, we iterate the input array twice. First iteration happens when initializing the count array. Second iteration happens when building the output array. Each iteration has O(n) running time. Calcuating the prefixSum of count has O(k) running time. So the overall time complexity of counting sort is O(n + k).
 
-- Space：O(n + k) <br/>
+- Space: O(n + k) <br/>
 count array holds up to k distinct values, and output array holds n elements. So the total space complexity is O(n + k).
 
 ### C# implementation
