@@ -10,7 +10,7 @@ Sort input array by using counting sort from least significant digit (LSD) to mo
 Time complexity for counting sort is O(n + b) where n is the size of input array, b is the base/radix for representing numbers. Radix sort will use counting sort d times where d is the number of digit of the max value.
 
 - Space: O(n + b) <br/>
-count array holds up to b distinct values, and output array holds n elements. So the total space complexity is O(n + k).
+count array holds up to b distinct values, and output array holds n elements. So the total space complexity is O(n + b).
 
 ### References
 1. https://en.wikipedia.org/wiki/Radix_sort
