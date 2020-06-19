@@ -16,10 +16,10 @@ If range is given, we iterate the input array twice. First iteration happens whe
 count array holds up to k distinct values, and output array holds n elements. So the total space complexity is O(n + k).
 
 ### Pros and Cons
-Pros:
+- Pros:
 1. Counting sort runs in linear time complexity.
 
-Cons:
+- Cons:
 1. Restricted inputs: counting sort only works for sorting non-negative elements.
 2. Space cost: counting sort has O(n) space complexity. If the range of the input array is big, then a lot of space is needed.
 
