@@ -1,6 +1,6 @@
 # Counting Sort
 ### Introduction
-Counting Sort is non-comparison sorting algorithm that sorts the elements of an array by counting the number of occurences of each distinct element in the array. Counting sort can only be used to sort elements with non-negative integer keys.
+Counting Sort is non-comparison sorting algorithm that sorts the elements of an array by counting the number of occurences of each distinct element. Counting sort can only be used to sort elements with non-negative integer keys.
 
 ### Complexity
 - Time: O(n + k) <br/>
