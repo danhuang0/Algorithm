@@ -6,7 +6,7 @@ Radix Sort is non-comparative sorting algorithm. It avoids comparision by creati
 Sort input array by using counting sort from least significant digit (LSD) to most significant digit (MSD).
 
 ### Complexity
-- Time: O(d*(n + k)) <br/>
+- Time: O(d*(n + b)) <br/>
 Time complexity for counting sort is O(n + b) where n is the size of input array, b is the base/radix for representing numbers. Radix sort will use counting sort d times where d is the number of digit of the max value.
 
 - Space: O(n + b) <br/>
