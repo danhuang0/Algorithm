@@ -16,8 +16,15 @@ Since fast pointer moves at twice the speed, then the distance fast pointer went
 So i = (b - a) * n. In other words, when slow pointer and fast pointer meet, the distance that slow pointer went through is an integer multiple of the cycle length (i = k * n). Since the distanec between start point and cycle entry is m , we will further know m = p.
 
  
-
 ## LinkedList
+<div class="linkedlist-table"></div>
+
+Number | Description                           | Difficulty | Solution
+------- | ------------------------------------- | -------- |-------- 
+141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | [Link](https://leetcode.com/problems/linked-list-cycle/discuss/710326/C-Floyd's-cycle-detection-(slow-fast-pointer))
+142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Easy | [Link](https://leetcode.com/problems/linked-list-cycle-ii/discuss/710361/C-Floyd's-cycle-detection-(slow-fast-pointer))
+
+<div class="linkedlist-table"></div>
 
 
 ## Iterated function values
