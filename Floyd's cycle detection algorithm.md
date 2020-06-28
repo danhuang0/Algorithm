@@ -17,19 +17,12 @@ So i = (b - a) * n. In other words, when slow pointer and fast pointer meet, the
 
  
 ## LinkedList
-<div class="linkedlist-table"></div>
-
-Number | Description                           | Difficulty | Solution
-------- | ------------------------------------- | -------- |-------- 
-141 | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | [Link](https://leetcode.com/problems/linked-list-cycle/discuss/710326/C-Floyd's-cycle-detection-(slow-fast-pointer))
-142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | Easy | [Link](https://leetcode.com/problems/linked-list-cycle-ii/discuss/710361/C-Floyd's-cycle-detection-(slow-fast-pointer))
-
-<div class="linkedlist-table"></div>
-
+- [141 Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- [142 Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 
 ## Iterated function values
-
-
+- [202. Happy Number](https://leetcode.com/problems/happy-number/)
+- [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
 ## References
 1. https://en.wikipedia.org/wiki/Cycle_detection
