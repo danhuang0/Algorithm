@@ -3,6 +3,33 @@ Depth First Search (DFS) is an algorithm used to traversing or searching tree or
 
 Particularly, the idea of DFS is to start from the root node of a tree or any arbitrary node of a graph, then mark the node and move the the next adjacent unmarked node. Repeat this loop until there is no unmarked adjacent nodes, then trackback and check for other unmarked nodes and traverse them.
 
+## Pseudocode
+- Recursive version:
+```
+procedure DFS(g, u) is
+  mark u as visited
+  foreach(adjacent node v of u in the graph)
+    if(v is not visited)
+      recursively call DFS(g, v)
+```
+- iterative version:
+```
+procedure DFS(g, u) is
+  define a Stack 
+  Stack.Push(u)
+  while Stack is not empty
+  {
+    curr = Stack.Pop();
+    if curr is not marked as visited
+    {
+      mark curr as visited
+      foreach(adjacent node v of u in the graph
+        Stack.Push(v)
+    }
+  }
+```
+  
+
 ## Applications of DFS
 #### 1. Find minimum spanning tree and shortest paths
 For a weighted graph, DFS traversal of the graph produces the minmum spanning tree and all pair shortest path tree.
