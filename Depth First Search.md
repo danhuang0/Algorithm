@@ -18,16 +18,18 @@ procedure DFS(g, u) is
   define a Stack 
   Stack.Push(u)
   while Stack is not empty
-  {
     curr = Stack.Pop();
     if curr is not marked as visited
-    {
       mark curr as visited
-      foreach(adjacent node v of u in the graph
+      foreach(adjacent node v of u in the graph)
         Stack.Push(v)
-    }
-  }
 ```
+
+## DFS backtracing
+
+
+
+
   
 
 ## Applications of DFS
@@ -46,3 +48,4 @@ A graph has a cycle if and only if there is a back edge during DFS.
 ## References
 1. https://en.wikipedia.org/wiki/Depth-first_search
 2. https://www.geeksforgeeks.org/applications-of-depth-first-search/
+3. http://www.cs.cmu.edu/afs/cs/academic/class/15210-s12/www/lectures/lecture09.pdf
