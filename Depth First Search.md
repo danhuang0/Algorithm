@@ -24,7 +24,7 @@ iterative DFS(g, u): // g is the graph, u is the start node
 ```
 
 ## DFS backtracing
-![image](https://github.com/idanhuang/DataStructure-and-Algorithm/blob/master/image/DFS_backtracing.png) <br/>
+![image](https://github.com/idanhuang/DataStructure-and-Algorithm/blob/master/image/DFS_backtrack.png) <br/>
 DFS will explore a path as far as possible. When there are no more vertex along the current path can be expored, DFS move backwards on the same path to find vertex to traverse. All the vertex on the current paths will be visited before the next path will be selected.
 
 Example 1: In the left graph, DFS will start from vertex s, then vertices 1, 2 and 3 (suppose DFS choose 1 before 4). After visiting vertex 3, DFS hits a dead end and will back out to 2 then back to 1. Then DFS will select the next path to explore, DFS will visit vertices 4, 5 and 6 successively. When hitting vertex 6, DFS will back out to 5, 4 and s.
