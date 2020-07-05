@@ -32,6 +32,99 @@ Example 1: In the left graph, DFS will start from vertex s, then vertices 1, 2 a
 
 Example 2: In the right graph, DFS will start from vertex s, then vertices 1, 2, and 3 (suppose DFS chooses 3 before 5 when at vertex 2). When DFS hits a dead end at vertex 3, it back out to 2, then traverses vertex 5, then to 4. Then back out to 5 before travering vertex 6. Then DFS will back out to 5, then 2 then 1, then s.
 
+## DFS Implementation
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Graph
+{
+    public Dictionary<int, List<int>> graph = null;
+
+    public Graph(List<int> vertices)
+    {
+        graph = new Dictionary<int, List<int>>();
+        foreach (int vertex in vertices)
+            graph[vertex] = new List<int>();
+    }
+
+    public void AddEdge(int source, int destination)
+    {
+        if (graph.ContainsKey(source))
+            graph[source].Add(destination);
+        else
+            graph[source] = new List<int>() { destination };
+    }
+}
+
+public class DFS
+{
+    public List<int> RecursiveDFS(Dictionary<int, List<int>> graph, int u, List<int> path, HashSet<int> visited)
+    {
+        path.Add(u);
+        visited.Add(u);
+
+        foreach(int v in graph[u])
+        {
+            if(!visited.Contains(v))
+            {
+                visited.Add(v);
+                RecursiveDFS(graph, v, path, visited);
+            }
+        }
+
+        return path;
+    }
+
+    public HashSet<int> IterativeDFS(Dictionary<int, List<int>> graph, int u, HashSet<int> visited)
+    {
+        Stack<int> stack = new Stack<int>();
+        stack.Push(u);
+
+        while(stack.Any())
+        {
+            int v = stack.Pop();
+            if (!visited.Contains(v))
+            {
+                visited.Add(v);
+                foreach (int w in graph[v])
+                {
+                    stack.Push(w);
+                }
+            }
+        }
+
+        return visited;
+    }
+
+    public static void Main(string[] args)
+    {
+        Graph g = new Graph(new List<int>() { 0, 1, 2, 3, 4, 5, 6 });
+        g.AddEdge(0, 1);
+        g.AddEdge(1, 2);
+        g.AddEdge(2, 3);
+        g.AddEdge(2, 5);
+        g.AddEdge(5, 4);
+        g.AddEdge(5, 6);
+
+        DFS dfs = new DFS();
+        HashSet<int> visited = new HashSet<int>();
+        List<int> path = new List<int>();
+        List<int> res = dfs.RecursiveDFS(g.graph, 0, path, visited);
+        foreach(int node in res)
+        {
+            Console.WriteLine(node);
+        }
+
+        HashSet<int> res2 = dfs.IterativeDFS(g.graph, 0, visited);
+        foreach(int node in res2)
+        {
+            Console.WriteLine(node);
+        }
+    }
+}
+```
 ## Applications of DFS 
 #### 1. Find minimum spanning tree and shortest paths
 For a weighted graph, DFS traversal of the graph produces the minmum spanning tree and all pair shortest path tree.
