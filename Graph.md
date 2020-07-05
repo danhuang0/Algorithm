@@ -28,3 +28,4 @@ In a directed weighted graph, graph[i][j] = w indicates there is an edge from ve
 2. https://en.wikipedia.org/wiki/Graph_%28abstract_data_type%29#Representations
 3. https://www.geeksforgeeks.org/graph-and-its-representations/
 4. https://www.javatpoint.com/graph-theory-graph-representations#:~:text=In%20graph%20theory%2C%20a%20graph,to%20it%20by%20an%20edge).
+5. https://en.wikipedia.org/wiki/Adjacency_list
