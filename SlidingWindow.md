@@ -18,9 +18,14 @@ Sliding window problems are a subset of dynamic programming problems because
 - Overrlapping: The subproblems are overlapping.
 - Optimal Substructure: The overall optimal solution can be obtained by using optimal solutions of its subproblems.
 
+## Fixed-size sliding window
+
+## Flexible-SIze sliding window
+[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
 
 ## Reference
 1. https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66
 2. https://levelup.gitconnected.com/an-introduction-to-sliding-window-algorithms-5533c4fe1cc7
 3. https://www.geeksforgeeks.org/overlapping-subproblems-property-in-dynamic-programming-dp-1/?ref=lbp
 4. https://www.geeksforgeeks.org/optimal-substructure-property-in-dynamic-programming-dp-2/
+5. https://www.youtube.com/watch?v=MK-NZ4hN7rs
