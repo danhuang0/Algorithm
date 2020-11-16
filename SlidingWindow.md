@@ -1,12 +1,17 @@
 # Sliding Window
 
 ## Introduction
-Sliding window algorithm can be used to solve problems that require checking some parts of data that is organized in linear data structures such as Array, String, LinkedList, etc. As the name suggests, sliding window alogrithm forms a window over some parts of data and the window will slide over the data to capature different portions of it.
+Sliding window algorithm can be used to solve problems that require checking some parts of data that is organized in linear data structures such as Array, String, LinkedList, etc. As the name suggests, sliding window alogrithm forms a window over some parts of data and the window will slide over the data to capature different portions of it. 
 
 
 ## How to identify sliding window problems
 - The problems will involve a data structure that is ordered and iterable like an array, a string or a linked list.
 - The problems often ask for contigous and optimal things, like the longest sequence or shortest sequence of something that satisfies a given condition exactly.
+
+
+## Benefits of using sliding window
+The sliding window problems usually can also be solved by brute force solutions which will run in O(N^2), O(2^N) or some other large time complexity. This is because brute force solutions will validate all the possible solutions, and this will cause duplicated work. For example, visit the same element multiple times. By using sliding window algorithm, we can visit each element only once, so that achieve the linear time complexity.
+
 
 ## Sliding window problems are dynamic programming problems
 Sliding window problems are a subset of dynamic programming problems because
