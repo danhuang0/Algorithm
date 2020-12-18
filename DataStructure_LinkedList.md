@@ -12,7 +12,7 @@ LinkedList is a linear data structure, in which the elements are not stored in c
    The last node of a LinkedList. It's next pointer points at null.
 
 ## Advantanges and Disadvantages of LinkedList
-LinkedList is one of the simplest and most common data struture. It has advantanges and disadvantages.
+LinkedList is one of the simplest and most common data struture. It has advantanges and disadvantages comparing with Array.
 - Advantages
   * Quick for insertion and deletion.
   * Size of LinkedList increases or decreases dynamically.
@@ -20,3 +20,57 @@ LinkedList is one of the simplest and most common data struture. It has advantan
   * Does not allow random access. It takes linear time to visit an element.
   * Use more memory than Array because of the storage used by pointers.
   * Difficult for reverse traversing.
+
+## Sentinel Node
+A sentinel node is a dummy node that allows us to simplify boundary conditions. It doesn't hold or reference any data manged by the data structure.
+
+### Delete node
+* Without sentinel node
+```C#
+    public ListNode RemoveElements(ListNode head, int val) {
+        
+        if(head == null)
+            return null;
+        
+        ListNode curr = head;
+        
+        while(curr != null && curr.val == val)
+        {
+            curr = curr.next;
+            head = curr;
+        }
+        
+        while(curr != null && curr.next != null)
+        {
+            if(curr.next.val == val)
+                curr.next = curr.next.next;
+            else
+                curr = curr.next;
+        }
+        
+        return head;
+    }
+```
+* With sentinel node
+```C#
+    public ListNode RemoveElements(ListNode head, int val) {
+        
+        if(head == null)
+            return null;
+        
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode curr = dummy;
+        
+        while(curr != null && curr.next != null)
+        {
+            if(curr.next.val == val)
+                curr.next = curr.next.next;
+            else
+                curr = curr.next;
+        }
+        
+        return dummy.next;
+    }
+```
+### Insert node
