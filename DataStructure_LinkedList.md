@@ -24,7 +24,7 @@ LinkedList is one of the simplest and most common data struture. It has advantan
 ## Sentinel Node
 A sentinel node is a dummy node that allows us to simplify boundary conditions. It doesn't hold or reference any data manged by the data structure.
 
-### Delete node
+### Delete node [LC 27](https://leetcode.com/problems/remove-element/)
 * Without sentinel node
 ```C#
     public ListNode RemoveElements(ListNode head, int val) {
@@ -73,4 +73,116 @@ A sentinel node is a dummy node that allows us to simplify boundary conditions. 
         return dummy.next;
     }
 ```
-### Insert node
+## Design LinkedList [LC707](https://leetcode.com/problems/design-linked-list/)
+```C#
+public class MyLinkedList {
+
+    public class ListNode
+    {
+        public int val;
+        public ListNode next;
+        public ListNode(int val = 0, ListNode next = null)
+        {
+            this.val = val;
+            this.next = next;
+        }
+    }
+    
+    public ListNode head;
+    public int count;
+    
+    /** Initialize your data structure here. */
+    public MyLinkedList() {
+        
+    }
+    
+    public int Get(int index) {
+        
+        if(index >= count)
+            return -1;
+        else
+        {
+            ListNode curr = head;
+            while(index > 0)
+            {
+                curr = curr.next;
+                index--;
+            }
+            
+            return curr.val;
+        }
+    }
+    
+    public void AddAtHead(int val) {
+        
+        ListNode node = new ListNode(val);
+        node.next = head;
+        head = node;
+        count++;
+    }
+
+    public void AddAtTail(int val) {
+        
+        if(head == null)
+            head = new ListNode(val);
+        else
+        {
+            ListNode curr = head;
+            while(curr.next != null)
+                curr = curr.next;
+            
+            ListNode node = new ListNode(val);
+            curr.next = node;
+        }
+        count++;
+    }
+    
+    public void AddAtIndex(int index, int val) {
+        
+        if(index > count)
+            return;
+        else if(index == count)
+            AddAtTail(val);
+        else
+        {
+            ListNode dummy = new ListNode(-1);
+            dummy.next = head;
+            ListNode prev = dummy;
+            
+            while(index > 0)
+            {
+                prev = prev.next;
+                index--;
+            }
+            
+            ListNode node = new ListNode(val);
+            node.next = prev.next;
+            prev.next = node;
+            head = dummy.next;
+            count++;            
+        }
+    }
+    
+    public void DeleteAtIndex(int index) {
+        
+        if(index >= count)
+            return;
+        else
+        {
+            ListNode dummy = new ListNode(-1);
+            dummy.next = head;
+            ListNode prev = dummy;
+            
+            while(index > 0)
+            {
+                prev = prev.next;
+                index--;
+            }
+            
+            prev.next = prev.next.next;
+            head = dummy.next;
+            count--;
+        }
+    }
+}
+```
