@@ -11,9 +11,9 @@ Floyd's cycle detection algorithm (a.k.a tortoise and hare algorithm) can be use
 ## Alogrithm Proof
 ![image](https://github.com/idanhuang/DataStructure-and-Algorithm/blob/master/image/floyd's%20cycle%20detection.PNG)
 
-When slow pointer and fast pointer meet, the distance that slow pointer went through is i = m + a * n + k. <br/>
-Since fast pointer moves at twice the speed, then the distance fast pointer went through is 2 * i = m + b * n + k. <br/> 
-So i = (b - a) * n. In other words, when slow pointer and fast pointer meet, the distance that slow pointer went through is an integer multiple of the cycle length (i = k * n). Since the distanec between start point and cycle entry is m , we will further know m = p.
+- Assume the distance between start point and cycle entry is m. Distance between cycle point and meet point is k (clockwise).
+- When slow pointer and fast pointer meet, the distance that slow pointer goes through is i = m + a * n + k. Since fast pointer moves at twice the speed, then the distance that fast pointer goes through is 2 * i = m + b * n + k.
+- So i = (b - a) * n. In other words, when slow pointer and fast pointer meet, the distance that slow pointer goes through is an integer multiple of the cycle length, i.e., i = k * n. Since the distance between start point and cycle entry is m, we will further know m = p. Because m + k = k + p = a full cycle length.
 
  
 ## LinkedList
