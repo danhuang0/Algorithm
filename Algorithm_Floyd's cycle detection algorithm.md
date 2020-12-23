@@ -21,6 +21,9 @@ Floyd's cycle detection algorithm (a.k.a tortoise and hare algorithm) can be use
 - [142 Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 
 ## Iterated function (迭代函数) values
+An iterated function is a function which is obtained by composing another function with itself a certain number of times. 迭代函数重复的，与自身复合的函数。
+
+
 - [202. Happy Number](https://leetcode.com/problems/happy-number/)
 - [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 
