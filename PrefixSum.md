@@ -1,7 +1,7 @@
 # Prefix Sum
 
 ## Introduction
-Prefix sum is also known as cumulative sum or inclusive sum. 
+Prefix sum is also known as cumulative sum or inclusive sum. It is a useful technique when we calculate (or look for) the sum of elements in a given range, but it will sacrifice the space complexity sinec it requires additional memory to store the prefix sum. 
 
 For an one-dimensional array ```arr[]``` of size n, its prefix sum array ```prefixSum[]``` will have size of n, and ```prefixSum[i] = arr[0] + arr[1] + ... + arr[i]```.
 
