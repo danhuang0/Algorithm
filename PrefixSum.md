@@ -20,6 +20,8 @@ For an two-dimensional array ```arr[][]```,
 
 ## Two-dimentional prefix sum problems
   - 304 Range Sum Query 2D - Immutable
+  - 1314. Matrix Block Sum
+  
 ## References
 - https://en.wikipedia.org/wiki/Prefix_sum
 - https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
