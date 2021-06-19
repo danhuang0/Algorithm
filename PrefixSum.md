@@ -19,7 +19,7 @@ For an two-dimensional array ```arr[][]```,
 - 325 Maximum Size Subarray Sum Equals k
 
 ## Two-dimentional prefix sum problems
-
+  - 304 Range Sum Query 2D - Immutable
 ## References
 - https://en.wikipedia.org/wiki/Prefix_sum
 - https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
