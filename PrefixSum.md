@@ -18,6 +18,7 @@ For an two-dimensional array ```arr[][]```,
 - 560 Subarray Sum Equals K
 - 325 Maximum Size Subarray Sum Equals k
 - 974 Subarray Sums Divisible by K
+- 1590 Make Sum Divisible by P
 
 ## Two-dimentional prefix sum problems
   - 304 Range Sum Query 2D - Immutable
