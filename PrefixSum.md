@@ -24,6 +24,7 @@ For an two-dimensional array ```arr[][]```,
   - 304 Range Sum Query 2D - Immutable
   - 1314 Matrix Block Sum
   - 1074 Number of Submatrices That Sum to Target
+  - 363 Max Sum of Rectangle No Larger Than K
   
 ## References
 - https://en.wikipedia.org/wiki/Prefix_sum
