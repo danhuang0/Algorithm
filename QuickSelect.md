@@ -1,62 +1,60 @@
-#Quick Select
-Quick select is a selection algorithm to select Kth smallest or largest element in an unordered list. I was invented by Tony Hoare.
+## Introduction
+Quickselect is a selection algorithm to find the Kth smallest/largest element in an unsorted list. Quickselect uses the same overall approach as Quicksort, choosing one element as the pivot and then partition the elements in two parts: numbers smaller than the pivot are in the first group, numbers greater than or equal to the pivot are in the second group. Unlike Quicksort, Quickselect only recurses into one side that has the element it is searching for. 
 
-```
-public class Solution
-{
-    public int FindKthLargest(int[] nums, int k)
-    {
-        int resIdx = nums.Length - k;
+## Complexity
+Like Quicksort, Quickselect is fast in practice but has poor worst-case performance. The worst-case time complexity is O(n^2), the average and best case time complexity is O(n).
+
+* Worst-case
+Each partitioning only excludes one elements, so the time complexity is n + (n-1) + (n-2) + ... + 2 + 1 = n*(n+1)/2, which is O(n^2).
+* Average case
+Each partitioning excludes half of all the elements, so the time complexity is n + n/2 + n/4 + ... + 1 = 2n*[1-(1/2)^n] < 2n, which is O(n).
+
+## Implementation
+```C#
+public class Solution {
+    public int FindKthLargest(int[] nums, int k) {
+        
         int left = 0, right = nums.Length - 1;
-
-        while (left < right)
+        int expectedIdx = nums.Length - k;
+        
+        while(left <= right)
         {
-            int pivLoc = Partition(nums, left, right);
-
-            if (resIdx == pivLoc)
-                break;
-            else if (resIdx < pivLoc)
-                right = pivLoc - 1;
+            int pivotLoc = Partition(nums, left, right);
+            
+            if(pivotLoc == expectedIdx)
+                return nums[expectedIdx];
+            else if(pivotLoc < expectedIdx)
+                left = pivotLoc + 1;
             else
-                left = pivLoc + 1;
+                right = pivotLoc - 1;
         }
-
-        return nums[resIdx];
+        
+        return Int32.MinValue;
     }
-
-    /// <summary>
-    /// divide nums into two parts. 
-    /// Elements less than the pivot will be on the left part.
-    /// Elements greater than the pivot will be on the right part.
-    /// </summary>
-    /// <param name="nums"></param>
-    /// <param name="left"></param>
-    /// <param name="right"></param>
-    /// <returns>index of pivot</returns>
+    
     private int Partition(int[] nums, int left, int right)
     {
         int pivot = nums[right];
-        int pivLoc = left;
-
-        for (int i = left; i < right; i++)
+        int pivotLoc = left;
+        for(int i = left; i < right; i++)
         {
-            if (nums[i] <= pivot)
+            if(nums[i] < pivot)
             {
-                Swap(nums, i, pivLoc);
-                pivLoc++;
+                Swap(nums, i, pivotLoc);
+                pivotLoc++;
             }
         }
-
-        Swap(nums, pivLoc, right);
-
-        return pivLoc;
+        
+        Swap(nums, pivotLoc, right);
+        
+        return pivotLoc;
     }
-
+    
     private void Swap(int[] nums, int i, int j)
     {
-        int tmp = nums[i];
+        int temp = nums[i];
         nums[i] = nums[j];
-        nums[j] = tmp;
+        nums[j] = temp;
     }
 }
 ```
